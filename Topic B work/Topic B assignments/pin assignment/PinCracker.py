@@ -59,6 +59,7 @@ class cracker:
             print(' ')
             print('cracked')
             break
+        break
   code(yourPin, loopCount)
 
 #this tells you how much time it took to crack yourPin
@@ -67,12 +68,5 @@ endTime = time.time()
 elapsedTime = (endTime - startTime)
 print(' ')
 print('your pin is', yourPin)
-print(' ')
-print('it took', elapsedTime, 'seconds to crack your pin')
-
-#this tells you how much time it took to crack yourPin
-
-endTime = time.time()
-elapsedTime = (endTime - startTime)
 print(' ')
 print('it took', elapsedTime, 'seconds to crack your pin')
