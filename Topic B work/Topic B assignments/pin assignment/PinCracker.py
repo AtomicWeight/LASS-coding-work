@@ -8,33 +8,76 @@ yourPin = str(input())
 pinlength = len(yourPin)
 
 #check to see if yourPin is valid or not 
+for element in yourPin:
+  while element in "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm,./;'[]{}\|`~!@#$%^&*()-_+=?<>:":
+    print(' ')
+    print('error')
+    print(' ')
+    yourPin = str(input())
+    if(yourPin not in "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm,./;'[]{}\|`~!@#$%^&*()-_+=?<>:"):
+      break
+    else:
+      print(' ')
+      print('error')
 
-if(pinlength == 4):
-  yourPin = int(yourPin)
+pinlength = len(yourPin)
+
+if(pinlength == 6):
   print(' ')
-  confirmYourPin = int(input('Confirm your PIN: '))
+  confirmYourPin = str(input('Confirm your PIN: '))
+  for element in confirmYourPin:
+    while element in "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm,./;'[]{}\|`~!@#$%^&*()-_+=?<>:":
+      print(' ')
+      print('error')
+      print(' ')
+      confirmYourPin = str(input())
+      if(confirmYourPin not in "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm,./;'[]{}\|`~!@#$%^&*()-_+=?<>:"):
+        break
+      else:
+        print(' ')
+        print('error')
   while(confirmYourPin != yourPin):
     print(' ')
     print('ERROR!')
     print(' ')
-    confirmYourPin = int(input('Confirm your PIN: '))
+    confirmYourPin = str(input('Confirm your PIN: '))
   print(' ')
   print('Success')
+  if(yourPin[0] == yourPin[1] and yourPin[1] == yourPin[2] and yourPin[2] == yourPin[3] and yourPin[3] == yourPin[4] and yourPin[4] == yourPin[5]):
+    print('yourPin is an easy pin to break')
+    yourPin = int(yourPin)
+  else:
+    yourPin = int(yourPin)
 else:
   print('ERROR!')
-  while(pinlength != 4):
+  while(pinlength != 6):
     print('')
     print('please enter your pin again')
     yourPin = str(input())
     pinlength = len(yourPin)
   print(' ')
-  yourPin = int(yourPin)
-  confirmYourPin = int(input('confirm your PIN: '))
+  confirmYourPin = str(input('confirm your PIN: '))
+  for element in confirmYourPin:
+    while element in "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm,./;'[]{}\|`~!@#$%^&*()-_+=?<>:":
+      print(' ')
+      print('error')
+      print(' ')
+      confirmYourPin = str(input())
+      if(confirmYourPin not in "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm,./;'[]{}\|`~!@#$%^&*()-_+=?<>:"):
+        break
+      else:
+        print(' ')
+        print('error')
   while(confirmYourPin != yourPin):
     print(' ')
     print('ERROR!')
     print(' ')
-    confirmYourPin = int(input('confirm your PIN: '))
+    confirmYourPin = str(input('confirm your PIN: '))
+  if(yourPin[0] == yourPin[1] and yourPin[1] == yourPin[2] and yourPin[2] == yourPin[3] and yourPin[3] == yourPin[4] and yourPin[4] == yourPin[5]):
+    print('yourPin is an easy pin to break')
+    yourPin = int(yourPin)
+  else:
+    yourPin = int(yourPin)
 
 #this program will crack yourPin and also record how much time it would take
 
