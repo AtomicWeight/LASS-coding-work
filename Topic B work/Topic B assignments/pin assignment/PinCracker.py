@@ -7,35 +7,19 @@ print(' ')
 yourPin = str(input())
 pinlength = len(yourPin)
 
-#check to see if yourPin is valid or not 
-for element in yourPin:
-  while element in "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm,./;'[]{}\|`~!@#$%^&*()-_+=?<>:":
-    print(' ')
-    print('error')
-    print(' ')
-    yourPin = str(input())
-    if(yourPin not in "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm,./;'[]{}\|`~!@#$%^&*()-_+=?<>:"):
-      break
-    else:
-      print(' ')
-      print('error')
+#check to see if yourPin is valid or not
 
-pinlength = len(yourPin)
+for element in yourPin:
+  while yourPin in "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm,./;'[]{}\|`~!@#$%^&*()-_+=?<>:":
+    print('error')
+    yourPin = str(input())
+    pinlength = len(yourPin)
+
+
 
 if(pinlength == 6):
   print(' ')
   confirmYourPin = str(input('Confirm your PIN: '))
-  for element in confirmYourPin:
-    while element in "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm,./;'[]{}\|`~!@#$%^&*()-_+=?<>:":
-      print(' ')
-      print('error')
-      print(' ')
-      confirmYourPin = str(input())
-      if(confirmYourPin not in "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm,./;'[]{}\|`~!@#$%^&*()-_+=?<>:"):
-        break
-      else:
-        print(' ')
-        print('error')
   while(confirmYourPin != yourPin):
     print(' ')
     print('ERROR!')
@@ -57,17 +41,6 @@ else:
     pinlength = len(yourPin)
   print(' ')
   confirmYourPin = str(input('confirm your PIN: '))
-  for element in confirmYourPin:
-    while element in "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm,./;'[]{}\|`~!@#$%^&*()-_+=?<>:":
-      print(' ')
-      print('error')
-      print(' ')
-      confirmYourPin = str(input())
-      if(confirmYourPin not in "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm,./;'[]{}\|`~!@#$%^&*()-_+=?<>:"):
-        break
-      else:
-        print(' ')
-        print('error')
   while(confirmYourPin != yourPin):
     print(' ')
     print('ERROR!')
@@ -95,7 +68,7 @@ class cracker:
       else:
         p = int(p)
         while(loopCount != p):
-          loopCount = loopCount + 1 
+          loopCount = loopCount + 1
           print(' ')
           print(loopCount)
           if(loopCount == p):
